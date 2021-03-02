@@ -1,0 +1,24 @@
+server:
+  port: 9091
+  servlet:
+    context-path: /cdfz
+spring:
+  datasource:
+    url: jdbc:mysql://172.29.5.152:3306/cdfz?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: thePassionate
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: non_empty
+    time-zone: Asia/Shanghai
+  mvc:
+    static-path-pattern: /static/**
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  mapper-locations: classpath:xml/*Mapper.xml

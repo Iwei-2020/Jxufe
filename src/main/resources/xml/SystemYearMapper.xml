@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smile.mapper.SystemYearMapper">
+    <select id="getSystemYear" resultType="string">
+        SELECT `year` FROM `system_year` WHERE id = 1343829079194914817
+    </select>
+</mapper>
